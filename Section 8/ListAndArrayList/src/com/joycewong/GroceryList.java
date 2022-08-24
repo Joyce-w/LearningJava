@@ -26,10 +26,22 @@ public class GroceryList {
         System.out.println("Grocery item " + (position+1) + " has been modified.");
     }
 
-    //removing an arralist element
+    //removing an arraylist element
     public void removeGroceryItem(int position){
         String theItem = groceryList.get(position);
         groceryList.remove(position);
 
+    }
+
+    //find item in list
+    public String findItem(String searchItem){
+        //returns true/false depending on whether item exists
+        boolean exists = groceryList.contains(searchItem);
+        //search arrayList and searches item you pass. returning position if found or -1 if not
+        int position = groceryList.indexOf(searchItem);
+        if(position >= 0){
+            return groceryList.get(position);
+        }
+        return null;
     }
 }

@@ -8,5 +8,6 @@ public class Main {
     //8. Create new dog
     Dog dog = new Dog("Yorkie",5,5,2,4,1,29,"silkie");
     dog.eat();
+    dog.walk();
     }
 }
